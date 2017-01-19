@@ -1,0 +1,25 @@
+<style>
+    img {
+        height: 200px;
+        width: auto;
+    }
+    /* fancy CSS transitions: https://robots.thoughtbot.com/transitions-and-transforms */
+</style>
+{{#each images}}
+    <img src="/images/{{this}}" />
+{{/each}}
+
+<br/>
+<br/>
+
+{{#if pagination.prevPage}}
+    <a href="?page={{pagination.prevPage}}"><-- Prev</a>
+{{else}}
+    <-- Prev
+{{/if}}
+
+{{#if pagination.nextPage}}
+    <a href="?page={{pagination.nextPage}}">Next --></a>
+{{else}}
+    Next -->
+{{/if}}
